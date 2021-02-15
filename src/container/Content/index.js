@@ -11,7 +11,7 @@ const Content = () => {
     fetch("https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=afb6c60a0e864a67ad1d9120da7c8f4b")
       .then((response) => response.json())
       .then((data) => {
-        setData(data);
+        setData(data.articles);
         setisloading(false);
         console.log(data);
       });
@@ -20,7 +20,14 @@ const Content = () => {
   const newsFeed = data?.map((articles, i) => (
     <Card
       key={i}
-      name={articles.name}
+      name={articles.source.name}
+      author={articles.author}
+      title={articles.title}
+      description={articles.description}
+      url={articles.url}
+      urlToImage={articles.urlToImage}
+      publishedAt={articles.publishedAt}
+      content={articles.content}
     />
   ));
   return isloading ? <Spinner /> : newsFeed;

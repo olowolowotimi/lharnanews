@@ -1,0 +1,14 @@
+.card{
+    width: 100%;
+    height: 300px;
+}
+.content{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.content img{
+    width: 250px;
+    height: 200px;
+    border-radius: 25px;
+}
