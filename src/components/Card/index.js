@@ -19,13 +19,14 @@ const Card = ({
                 <div className={cardStyle.content}>
                     <div className={cardStyle.text}>
                 <h4>{name}</h4>
-                <p>{author}</p>
+                <p className={cardStyle.author}>{author}</p>
                 <p>{title}</p>
                 <p>{description}</p>
-                <p>{url}</p>
-                <p>{publishedAt}</p>
+                <a href={url} className={cardStyle.link}>read more...</a>
+                <p className={cardStyle.time}>{publishedAt}</p>
                 </div>
-                <img src={urlToImage} alt="image"/>
+                <img src={urlToImage} alt="img" className={cardStyle.img}/>
+                
                 
 
                 </div>

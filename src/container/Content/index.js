@@ -27,7 +27,7 @@ const Content = () => {
       url={articles.url}
       urlToImage={articles.urlToImage}
       publishedAt={articles.publishedAt}
-
+    
     />
   ));
   return isloading ? <Spinner /> : newsFeed;
