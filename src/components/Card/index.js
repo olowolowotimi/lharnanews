@@ -24,7 +24,6 @@ const Card = ({
                 <p>{description}</p>
                 <p>{url}</p>
                 <p>{publishedAt}</p>
-                <p>{content}</p>
                 </div>
                 <img src={urlToImage} alt="image"/>
                 
